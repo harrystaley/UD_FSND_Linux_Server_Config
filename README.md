@@ -25,6 +25,14 @@ This repo is used to complete the linux server config for the Udacity Full Stack
 
 | Criteria | Meets Specifications |
 |----------|----------------------|
-| | |
+| Has the database server been configured to properly serve data? | Database server has been configured to serve data (postresql is recommended). |
+| Can the VM (AWS Server) be remotely logged into? | VM can be remotely logged into. |
+| Has the web-server been configured to serve the Item Catalog application? | Web-server has been configured to serve the Item Catalog application as a wsgi app. |
+
+### Documentation
+
+| Criteria | Meets Specifications |
+|----------|----------------------|
+| Is a README file included in the GitHub repo containing all specified information? | A README file is included in the GitHub repo containing the following information: IP address, URL, summary of software installed, summary of configurations made, and a list of third-party resources used to completed this project. |
 
 
