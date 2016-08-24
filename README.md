@@ -1,5 +1,5 @@
-# FSND_Linux_Server_Config-
-This repo is used to complete the linux server config for the Udacity Full Stack Nanodegree
+# FSND_Linux_Server_Config
+This repo is used to complete the linux server configuration project for the Udacity Full Stack Nanodegree.
 
 ## Project Requirements
 
@@ -34,5 +34,25 @@ This repo is used to complete the linux server config for the Udacity Full Stack
 | Criteria | Meets Specifications |
 |----------|----------------------|
 | Is a README file included in the GitHub repo containing all specified information? | A README file is included in the GitHub repo containing the following information: IP address, URL, summary of software installed, summary of configurations made, and a list of third-party resources used to completed this project. |
+
+## Project Documentation
+
+### IP Address
+
+
+
+### URL
+
+
+
+### Software Installed
+
+
+
+### Configuration summary
+
+
+
+### Third-party resources used
 
 
