@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+  {% block title %}
+    <title>Restaurant Menus</title>
+  {% endblock title %}
+
+  {% block content %}
+    <h1>Where would you like to eat?</h1>
+    <br>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+        <ul class="flash">
+        {% for message in messages %}
+          <li>
+            <strong class="flash">{{message}}</strong>
+          </li>
+        {% endfor %}
+        </ul>
+
+      {% endif %}
+    {% endwith %}
+    {% if user_id %}
+      <a href="{{url_for('new_restaurant')}}">New Restaurant</a>
+    {% endif %}
+    <br>
+    <br>
+    {% if restaurants %}
+      {% for restaurant in restaurants %}
+      {% if loop.index is divisibleby 4 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-md-3">
+        <a class="menu_item" href="/restaurant/{{restaurant.id}}/">{{restaurant.name}}</a>
+        <br>
+        {% if restaurant.user_id == user_id %}
+          <a class="btn" href="{{url_for('edit_restaurant', restaurant_id=restaurant.id)}}">Edit</a>
+          <a class="btn" href="{{url_for('delete_restaurant', restaurant_id=restaurant.id)}}">Delete</a>
+        {% endif %}
+      </div>
+      {% if loop.index is divisibleby 4 %}
+        </div>
+      {% endif %}
+      {% endfor %}
+    {% else %}
+      There are no restaurants why not create one.
+    {% endif %}
+  {% endblock content %}

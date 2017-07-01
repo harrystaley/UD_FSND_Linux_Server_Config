@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+  {% block title %}
+  	{{restaurant.name}} Menu - New Item
+  {% endblock title %}
+
+  {% block content %}
+  <h1>{{restaurant.name}} Menu - New Item</h1>
+  <form enctype=multipart/form-data action="{{url_for('new_menu_item', restaurant_id=restaurant.id)}}" method="post">
+    <fieldset>
+      <div>
+        <label for="name"> Name:</label>
+        <input type="text" size="80" name="name" placeholder="name">
+      </div>
+      <div>
+        <label for="course">Course:</label>
+        <select name="course">
+          <option value="Appetizer">Appetizer</option>
+          <option value="Entree">Entree</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Beverage">Beverage</option>
+        </select>
+      </div>
+      <div>
+        <label for="picture_url">Photo Url:</label>
+        <input type="text" size="80" name="picture_url" placeholder="photo url">
+      </div>
+      <div>
+        <label for="alt_text">Photo Caption:</label>
+        <input type="text" size="80" name="alt_text" placeholder="photo caption">
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <input type="text" size="80" name="description" placeholder="item description">
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="text" size="8" name="price" placeholder="price">
+      </div>
+      <input type="submit" value="Create">
+    </fieldset>
+  </form>
+{% endblock content %}
