@@ -31,7 +31,7 @@ CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 
 app = Flask(__name__)
-engine = create_engine('sqlite:///restaurantmenu.db')
+engine = create_engine('postgresql://restaurant:restaurant@localhost/restaurant')
 Base.metadata.bind = engine
 DB_SESSION = sessionmaker(bind=engine)
 session = DB_SESSION()

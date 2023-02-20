@@ -18,7 +18,7 @@ class User(Base):
     # mapper variables for each of the atributes of a restraunt
     name = Column(String(80), nullable=False)
     email = Column(String(80), nullable=False)
-    picture = Column(String(80), nullable=False)
+    picture = Column(String(250), nullable=False)
     id = Column(Integer, primary_key=True)
 
 
@@ -83,5 +83,5 @@ class MenuItem(Base):
 
 
 # END CONFIG CODE
-engine = create_engine('sqlite:///restaurantmenu.db')
+engine = create_engine('postgresql://restaurant:restaurant@localhost/restaurant')
 Base.metadata.create_all(engine)
